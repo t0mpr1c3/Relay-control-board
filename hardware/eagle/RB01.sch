@@ -2750,7 +2750,7 @@ ISO/IEC 7810, ID-1 Standard size 85.60 x 53.98 mm</description>
 &lt;/ul&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="JS-M1A">
+<package name="JS-M">
 <description>&lt;b&gt;Automotive Ultra-Miniature Power Relay&lt;/b&gt; NAiS&lt;p&gt;
 Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <wire x1="-10.9" y1="7.2904" x2="-10.2904" y2="7.9" width="0.2032" layer="21" curve="-90"/>
@@ -2765,6 +2765,7 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <pad name="1" x="6.7" y="6" drill="1.3" rot="R180"/>
 <pad name="2" x="6.7" y="-6" drill="1.3" rot="R180"/>
 <pad name="NO" x="-5.5" y="6" drill="1.3" rot="R180"/>
+<pad name="NC" x="-5.5" y="-6" drill="1.3" rot="R180"/>
 <text x="-8.89" y="1.27" size="1.27" layer="25">&gt;NAME</text>
 <text x="-8.89" y="-1.27" size="1.27" layer="27">&gt;VALUE</text>
 </package>
@@ -2787,44 +2788,47 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
 <pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
 </symbol>
-<symbol name="S">
-<wire x1="0" y1="3.175" x2="0" y2="1.905" width="0.254" layer="94"/>
-<wire x1="0" y1="-3.175" x2="0" y2="-1.905" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.905" x2="-1.27" y2="1.905" width="0.254" layer="94"/>
-<circle x="0" y="-1.905" radius="0.127" width="0.4064" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="95" rot="R90">&gt;PART</text>
-<pin name="P" x="0" y="-5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R90"/>
-<pin name="S" x="0" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<symbol name="U">
+<wire x1="3.175" y1="5.08" x2="1.905" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="5.08" x2="-1.905" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="2.54" y2="5.715" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="0" width="0.254" layer="94"/>
+<circle x="0" y="1.27" radius="0.127" width="0.4064" layer="94"/>
+<text x="2.54" y="0" size="1.778" layer="95">&gt;PART</text>
+<pin name="O" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="S" x="-5.08" y="5.08" visible="pad" length="short" direction="pas"/>
+<pin name="P" x="0" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="JS-M1A*" prefix="K">
+<deviceset name="JS-M1*" prefix="K">
 <description>&lt;b&gt;Automotive Ultra-Miniature Power Relay&lt;/b&gt; NAiS&lt;p&gt;
 Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <gates>
-<gate name="1" symbol="K" x="-10.16" y="0" addlevel="must"/>
-<gate name="2" symbol="S" x="7.62" y="0" addlevel="always"/>
+<gate name="1" symbol="K" x="-7.62" y="0" addlevel="must"/>
+<gate name="2" symbol="U" x="10.16" y="0" addlevel="always"/>
 </gates>
 <devices>
-<device name="" package="JS-M1A">
+<device name="" package="JS-M">
 <connects>
 <connect gate="1" pin="1" pad="1"/>
 <connect gate="1" pin="2" pad="2"/>
+<connect gate="2" pin="O" pad="NC"/>
 <connect gate="2" pin="P" pad="C"/>
 <connect gate="2" pin="S" pad="NO"/>
 </connects>
 <technologies>
 <technology name="-12V-4">
 <attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="JSM1A-12V-4" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="13P4554" constant="no"/>
+<attribute name="MPN" value="JSM1-12V-4" constant="no"/>
+<attribute name="OC_FARNELL" value="910338" constant="no"/>
+<attribute name="OC_NEWARK" value="13P4552" constant="no"/>
 </technology>
 <technology name="-12V-5">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="JSM1A-12V-5" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="13P4555" constant="no"/>
+<attribute name="MF" value="FARNELL" constant="no"/>
+<attribute name="MPN" value="JSM1-12V-5" constant="no"/>
+<attribute name="OC_FARNELL" value="910351" constant="no"/>
+<attribute name="OC_NEWARK" value="14J1764" constant="no"/>
 </technology>
 <technology name="-9V-4">
 <attribute name="MF" value="" constant="no"/>
@@ -2844,7 +2848,7 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <attribute name="OC_FARNELL" value="unknown" constant="no"/>
 <attribute name="OC_NEWARK" value="unknown" constant="no"/>
 </technology>
-<technology name="F-12V5">
+<technology name="F-12V-5">
 <attribute name="MF" value="" constant="no"/>
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="OC_FARNELL" value="unknown" constant="no"/>
@@ -2991,7 +2995,12 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <part name="J1" library="dp_devices" deviceset="CON_TERMINAL_BLOCK_03" device="-5MM"/>
 <part name="J2" library="dp_devices" deviceset="CON_TERMINAL_BLOCK_02" device="-5MM"/>
 <part name="Q1" library="transistor" deviceset="BC337" device=""/>
-<part name="K1" library="relay" deviceset="JS-M1A*" device="" technology="-12V-5"/>
+<part name="K1" library="relay" deviceset="JS-M1*" device="" technology="-12V-5">
+<attribute name="MF" value="FARNELL"/>
+<attribute name="MPN" value="JSM1-12V-5"/>
+<attribute name="OC_FARNELL" value="910351"/>
+<attribute name="OC_NEWARK" value="14J1764"/>
+</part>
 <part name="PCB1" library="dp_devices" deviceset="PCB_DP_RECTANGLE" device="-31X50"/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
@@ -3025,7 +3034,7 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <attribute name="VALUE" x="135.89" y="96.901" size="1.778" layer="96"/>
 <attribute name="PART" x="135.89" y="99.06" size="1.778" layer="95"/>
 </instance>
-<instance part="K1" gate="2" x="147.32" y="109.22" smashed="yes"/>
+<instance part="K1" gate="2" x="147.32" y="106.68" smashed="yes"/>
 <instance part="PCB1" gate="PCB" x="162.56" y="78.74"/>
 <instance part="P+1" gate="VCC" x="101.6" y="93.98"/>
 <instance part="P+2" gate="VCC" x="114.3" y="121.92"/>
@@ -3109,7 +3118,8 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <wire x1="154.94" y1="106.68" x2="172.72" y2="106.68" width="0.1524" layer="91"/>
 <label x="157.48" y="106.68" size="1.778" layer="95"/>
 <pinref part="K1" gate="2" pin="S"/>
-<wire x1="147.32" y1="114.3" x2="154.94" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="111.76" x2="142.24" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="114.3" x2="154.94" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="114.3" x2="154.94" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="J2" gate="CON" pin="1"/>
 <wire x1="172.72" y1="106.68" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
