@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.25" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.003125" altunitdist="mic" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -2725,6 +2725,8 @@ RB01</text>
 <text x="26.481" y="20.32" size="1.524" layer="22" ratio="15" rot="MR270">DANGER</text>
 <text x="17.481" y="18.32" size="1.524" layer="22" ratio="15" rot="MR270">HIGH</text>
 <text x="14.731" y="20.82" size="1.524" layer="22" ratio="15" rot="MR270">VOLTAGE</text>
+<rectangle x1="20.53394375" y1="15.325125" x2="20.94034375" y2="15.350525" layer="22" rot="R270"/>
+<rectangle x1="21.09041875" y1="15.8816" x2="21.39521875" y2="15.907" layer="22" rot="R270"/>
 </plain>
 <libraries>
 <library name="SparkFun">
