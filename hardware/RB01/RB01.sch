@@ -3013,7 +3013,7 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
-<instance part="GND1" gate="1" x="127" y="76.2"/>
+<instance part="GND1" gate="1" x="127" y="68.58"/>
 <instance part="R2" gate="G$1" x="111.76" y="86.36" rot="R180"/>
 <instance part="LED1" gate="G$1" x="114.3" y="114.3"/>
 <instance part="R4" gate="G$1" x="114.3" y="101.6" rot="R90"/>
@@ -3022,10 +3022,10 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <attribute name="VALUE" x="124.968" y="104.394" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R1" gate="G$1" x="119.38" y="78.74" rot="R270"/>
-<instance part="GND2" gate="1" x="101.6" y="78.74"/>
+<instance part="GND2" gate="1" x="101.6" y="68.58"/>
 <instance part="GND3" gate="1" x="119.38" y="68.58"/>
 <instance part="J1" gate="CON" x="96.52" y="86.36" rot="R180"/>
-<instance part="J2" gate="CON" x="172.72" y="96.52" rot="R270"/>
+<instance part="J2" gate="CON" x="170.18" y="106.68"/>
 <instance part="Q1" gate="G$1" x="124.46" y="86.36" smashed="yes">
 <attribute name="NAME" x="129.54" y="86.36" size="1.778" layer="95"/>
 <attribute name="VALUE" x="129.54" y="83.82" size="1.778" layer="96"/>
@@ -3036,16 +3036,16 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 </instance>
 <instance part="K1" gate="2" x="147.32" y="106.68" smashed="yes"/>
 <instance part="PCB1" gate="PCB" x="162.56" y="78.74"/>
-<instance part="P+1" gate="VCC" x="101.6" y="93.98"/>
+<instance part="P+1" gate="VCC" x="101.6" y="121.92"/>
 <instance part="P+2" gate="VCC" x="114.3" y="121.92"/>
-<instance part="P+3" gate="VCC" x="127" y="119.38"/>
+<instance part="P+3" gate="VCC" x="127" y="121.92"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="GND" class="0">
 <segment>
-<wire x1="101.6" y1="83.82" x2="101.6" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="83.82" x2="101.6" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <pinref part="J1" gate="CON" pin="1"/>
 <wire x1="96.52" y1="83.82" x2="101.6" y2="83.82" width="0.1524" layer="91"/>
@@ -3058,7 +3058,7 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="Q1" gate="G$1" pin="E"/>
-<wire x1="127" y1="78.74" x2="127" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="127" y1="71.12" x2="127" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -3110,19 +3110,18 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <label x="157.48" y="104.14" size="1.778" layer="95"/>
 <pinref part="K1" gate="2" pin="P"/>
 <pinref part="J2" gate="CON" pin="2"/>
-<wire x1="170.18" y1="96.52" x2="170.18" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LOAD1" class="0">
 <segment>
-<wire x1="154.94" y1="106.68" x2="172.72" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="106.68" x2="170.18" y2="106.68" width="0.1524" layer="91"/>
 <label x="157.48" y="106.68" size="1.778" layer="95"/>
 <pinref part="K1" gate="2" pin="S"/>
 <wire x1="142.24" y1="111.76" x2="142.24" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="114.3" x2="154.94" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="114.3" x2="154.94" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="J2" gate="CON" pin="1"/>
-<wire x1="172.72" y1="106.68" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="106.68" x2="170.18" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -3130,7 +3129,7 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <pinref part="J1" gate="CON" pin="3"/>
 <wire x1="96.52" y1="88.9" x2="101.6" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
-<wire x1="101.6" y1="88.9" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="88.9" x2="101.6" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
@@ -3144,7 +3143,7 @@ Source: http://www.mew-europe.com/.. en_ds_61211_0000.pdf</description>
 <pinref part="D1" gate="G$1" pin="C"/>
 <pinref part="K1" gate="1" pin="1"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
-<wire x1="127" y1="114.3" x2="127" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="127" y1="114.3" x2="127" y2="119.38" width="0.1524" layer="91"/>
 <junction x="127" y="114.3"/>
 </segment>
 </net>
